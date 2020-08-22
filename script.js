@@ -26,3 +26,42 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+
+// CLOCK ARMS
+const clocks = document.querySelectorAll('.clock');
+const deg = 6;
+
+for (var i=0; i<clocks.length; i++) {
+  var currentClock = clocks[i];
+  var gmtOffset = currentClock.dataset.timezone;
+  console.log(gmtOffset);
+  const hr = currentClock.querySelector('.hr');
+  const mn = currentClock.querySelector('.mn');
+  const sc = currentClock.querySelector('.sc');
+  var time = document.querySelector('.time');
+
+  document.querySelector('h1').innerHTML = currentClock.dataset.title;
+  
+  setInterval(() => {
+    let day = new Date();
+
+    let s = day.getUTCSeconds();
+    let ss = s * deg;
+    let ms = day.getUTCMilliseconds();
+    let mss = (ms * 0.006) + +ss;
+    
+    let m = day.getUTCMinutes();
+    let mm = m * deg; //60min * deg = 360 (degree around circle)
+
+    let h = +day.getUTCHours() + +gmtOffset; //prepended w/ "+" to parse into number
+    if (h < 0) h = 24 + +h;
+    let hh = h * 30; //hours hand loops around twice (720) (AM + PM)
+    
+    hr.style.transform = `rotateZ(${(hh)+(mm/12)+(mss/3600)}deg)`;
+    mn.style.transform = `rotateZ(${(mm)+(mss/60)}deg)`;
+    sc.style.transform = `rotateZ(${mss}deg)`;
+
+    time.innerHTML = 'Time: ' + h + ':' + m + ':' + s;
+  })
+}
