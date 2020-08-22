@@ -30,7 +30,6 @@ function showSlides(n) {
 
 // CLOCK ARMS
 const clocks = document.querySelectorAll('.clock');
-const deg = 6;
 
 for (var i=0; i<clocks.length; i++) {
   var currentClock = clocks[i];
@@ -47,12 +46,12 @@ for (var i=0; i<clocks.length; i++) {
     let day = new Date();
 
     let s = day.getUTCSeconds();
-    let ss = s * deg;
+    let ss = s * 6;
     let ms = day.getUTCMilliseconds();
     let mss = (ms * 0.006) + +ss;
     
     let m = day.getUTCMinutes();
-    let mm = m * deg; //60min * deg = 360 (degree around circle)
+    let mm = m * 6; //60min * 6 = 360 (degree around circle)
 
     let h = +day.getUTCHours() + +gmtOffset; //prepended w/ "+" to parse into number
     if (h < 0) h = 24 + +h;
@@ -62,6 +61,6 @@ for (var i=0; i<clocks.length; i++) {
     mn.style.transform = `rotateZ(${(mm)+(mss/60)}deg)`;
     sc.style.transform = `rotateZ(${mss}deg)`;
 
-    time.innerHTML = 'Time: ' + h + ':' + m + ':' + s;
+    time.innerHTML = 'Time: ' + ('0' + h).slice(-2) + ':' + ('0' + m).slice(-2) + ':' + ('0' + s).slice(-2); //adds beginning 0 if under 10
   })
 }
