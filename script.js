@@ -40,7 +40,7 @@ for (var i=0; i<clocks.length; i++) {
   const sc = currentClock.querySelector('.sc');
   var time = document.querySelector('.time');
 
-  document.querySelector('h1').innerHTML = currentClock.dataset.title;
+  //document.querySelector('h1').innerHTML = currentClock.dataset.title;
   
   setInterval(() => {
     let day = new Date();
@@ -61,6 +61,6 @@ for (var i=0; i<clocks.length; i++) {
     mn.style.transform = `rotateZ(${(mm)+(mss/60)}deg)`;
     sc.style.transform = `rotateZ(${mss}deg)`;
 
-    time.innerHTML = 'Time: ' + ('0' + h).slice(-2) + ':' + ('0' + m).slice(-2) + ':' + ('0' + s).slice(-2); //adds beginning 0 if under 10
+    time.innerHTML = ('0' + h).slice(-2) + ':' + ('0' + m).slice(-2) + ':' + ('0' + s).slice(-2); //adds beginning 0 if under 10
   })
 }
