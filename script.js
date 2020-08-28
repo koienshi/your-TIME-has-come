@@ -70,6 +70,8 @@ xhttp.onreadystatechange = function() {
   if(xhttp.readyState == 4) {
     if(xhttp.status == 200) {
       console.log(xhttp.responseText);
+      gmt_time = xhttp.responseTime.getElementById['datetime'];
+      console.log(gmt_time);
     }
   }
 
@@ -81,17 +83,20 @@ xhttp.onreadystatechange = function() {
 
 const API_URL = "http://worldtimeapi.org/api/timezone"; 
 
-xhttp.open("GET", "http://worldtimeapi.org/api/timezone/Etc/GMT.txt", true);
-console.log('something');
+xhttp.open("GET", "http://worldtimeapi.org/api/timezone/Etc/GMT", true);
 xhttp.send();
-// console.log(this.responseText);
-// xhttp.open("GET", "http://worldtimeapi.org/api/timezone/America/New_York");
+// xhttp.open("GET", "http://worldtimeapi.org/api/timezone/America/New_York.txt");
 // xhttp.send();
-// xhttp.open("GET", "http://worldtimeapi.org/api/timezone/America/Denver");
+// console.log('here1');
+// xhttp.open("GET", "http://worldtimeapi.org/api/timezone/America/Denver.txt");
 // xhttp.send();
-// xhttp.open("GET", "http://worldtimeapi.org/api/timezone/America/Los_Angeles");
+// console.log('here2');
+// xhttp.open("GET", "http://worldtimeapi.org/api/timezone/America/Los_Angeles.txt");
 // xhttp.send();
-// xhttp.open("GET", "http://worldtimeapi.org/api/timezone/Asia/Tokyo");
+// console.log('here3');
+// xhttp.open("GET", "http://worldtimeapi.org/api/timezone/Asia/Tokyo.txt");
 // xhttp.send();
-// xhttp.open("GET", "http://worldtimeapi.org/api/timezone/Europe/London");
+// console.log('here4');
+// xhttp.open("GET", "http://worldtimeapi.org/api/timezone/Europe/London.txt");
 // xhttp.send();
+// console.log('here5');
