@@ -71,10 +71,9 @@ xhttp.onreadystatechange = function() {
   
 }
 
-xhttp.open("GET", "http://worldtimeapi.org/api/timezone/Etc/GMT");
+xhttp.open("GET", "http://worldtimeapi.org/api/timezone/Etc/GMT.txt", true);
 xhttp.send();
-document.getElementById("datetime").innerHTML = xhttp.responseText;
-console.log()
+console.log(this.responseText);
 xhttp.open("GET", "http://worldtimeapi.org/api/timezone/America/New_York");
 xhttp.send();
 xhttp.open("GET", "http://worldtimeapi.org/api/timezone/America/Denver");
