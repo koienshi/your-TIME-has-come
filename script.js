@@ -64,3 +64,6 @@ for (var i=0; i<clocks.length; i++) {
     time.innerHTML = ('0' + h).slice(-2) + ':' + ('0' + m).slice(-2) + ':' + ('0' + s).slice(-2); //adds beginning 0 if under 10
   })
 }
+
+var xhttp = new XMLHttpRequest();
+
