@@ -66,13 +66,14 @@ for (var i=0; i<clocks.length; i++) {
 }
 
 var xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function()
+xhttp.onreadystatechange = function() {
 
-xhttp.open("GET", "http://worldtimeapi.org/api/timezone/Etc/GMT");
-xhttp.open("GET", "http://worldtimeapi.org/api/timezone/America/New_York");
-xhttp.open("GET", "http://worldtimeapi.org/api/timezone/America/Denver");
-xhttp.open("GET", "http://worldtimeapi.org/api/timezone/America/Los_Angeles");
-xhttp.open("GET", "http://worldtimeapi.org/api/timezone/Asia/Tokyo");
-xhttp.open("GET", "http://worldtimeapi.org/api/timezone/Europe/London");
+  xhttp.open("GET", "http://worldtimeapi.org/api/timezone/Etc/GMT");
+  xhttp.open("GET", "http://worldtimeapi.org/api/timezone/America/New_York");
+  xhttp.open("GET", "http://worldtimeapi.org/api/timezone/America/Denver");
+  xhttp.open("GET", "http://worldtimeapi.org/api/timezone/America/Los_Angeles");
+  xhttp.open("GET", "http://worldtimeapi.org/api/timezone/Asia/Tokyo");
+  xhttp.open("GET", "http://worldtimeapi.org/api/timezone/Europe/London");
 
 
+}
