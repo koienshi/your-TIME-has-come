@@ -67,7 +67,11 @@ for (var i=0; i<clocks.length; i++) {
 
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
-
+  if(xhttp.readyState == 4) {
+    if(xhttp.status == 200) {
+      console.log
+    }
+  }
   
 }
 
