@@ -82,15 +82,16 @@ xhttp.onreadystatechange = function() {
 const API_URL = "http://worldtimeapi.org/api/timezone"; 
 
 xhttp.open("GET", "http://worldtimeapi.org/api/timezone/Etc/GMT.txt", true);
+console.log('something');
 xhttp.send();
-console.log(this.responseText);
-xhttp.open("GET", "http://worldtimeapi.org/api/timezone/America/New_York");
-xhttp.send();
-xhttp.open("GET", "http://worldtimeapi.org/api/timezone/America/Denver");
-xhttp.send();
-xhttp.open("GET", "http://worldtimeapi.org/api/timezone/America/Los_Angeles");
-xhttp.send();
-xhttp.open("GET", "http://worldtimeapi.org/api/timezone/Asia/Tokyo");
-xhttp.send();
-xhttp.open("GET", "http://worldtimeapi.org/api/timezone/Europe/London");
-xhttp.send();
+// console.log(this.responseText);
+// xhttp.open("GET", "http://worldtimeapi.org/api/timezone/America/New_York");
+// xhttp.send();
+// xhttp.open("GET", "http://worldtimeapi.org/api/timezone/America/Denver");
+// xhttp.send();
+// xhttp.open("GET", "http://worldtimeapi.org/api/timezone/America/Los_Angeles");
+// xhttp.send();
+// xhttp.open("GET", "http://worldtimeapi.org/api/timezone/Asia/Tokyo");
+// xhttp.send();
+// xhttp.open("GET", "http://worldtimeapi.org/api/timezone/Europe/London");
+// xhttp.send();
