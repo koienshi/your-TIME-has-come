@@ -79,6 +79,8 @@ xhttp.onreadystatechange = function() {
   
 }
 
+const API_URL = "http://worldtimeapi.org/api/timezone"; 
+
 xhttp.open("GET", "http://worldtimeapi.org/api/timezone/Etc/GMT.txt", true);
 xhttp.send();
 console.log(this.responseText);
