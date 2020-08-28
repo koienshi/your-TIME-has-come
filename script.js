@@ -69,8 +69,12 @@ const xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
   if(xhttp.readyState == 4) {
     if(xhttp.status == 200) {
-      console.log
+      console.log(xhttp.responseText);
     }
+  }
+
+  if(xhttp.status == 404) {
+    console.log('File not found');
   }
   
 }
