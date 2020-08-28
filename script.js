@@ -65,7 +65,7 @@ for (var i=0; i<clocks.length; i++) {
   })
 }
 
-var xhttp = new XMLHttpRequest();
+const xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
 
   
