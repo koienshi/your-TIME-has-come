@@ -39,7 +39,7 @@ function createGMT() {
   const hr = currentClock.querySelector('.hr');
   const mn = currentClock.querySelector('.mn');
   const sc = currentClock.querySelector('.sc');
-  var time = document.querySelector('.time');
+  var time1 = document.querySelector('.gmttime');
 
  //document.querySelector('h1').innerHTML = currentClock.dataset.title;
 
@@ -62,7 +62,7 @@ function createGMT() {
     mn.style.transform = `rotateZ(${(mm)+(mss/60)}deg)`;
     sc.style.transform = `rotateZ(${mss}deg)`;
 
-    time.innerHTML = ('0' + h).slice(-2) + ':' + ('0' + m).slice(-2) + ':' + ('0' + s).slice(-2); //adds beginning 0 if under 10
+    time1.innerHTML = ('0' + h).slice(-2) + ':' + ('0' + m).slice(-2) + ':' + ('0' + s).slice(-2); //adds beginning 0 if under 10
   })
 }
 
@@ -76,7 +76,7 @@ function createEDT() {
     const hr = currentClock.querySelector('.hr');
     const mn = currentClock.querySelector('.mn');
     const sc = currentClock.querySelector('.sc');
-    var time = document.querySelector('.time');
+    var time2 = document.querySelector('.edttime');
   
    //document.querySelector('h1').innerHTML = currentClock.dataset.title;
   
@@ -99,7 +99,7 @@ function createEDT() {
       mn.style.transform = `rotateZ(${(mm)+(mss/60)}deg)`;
       sc.style.transform = `rotateZ(${mss}deg)`;
   
-      time.innerHTML = ('0' + h).slice(-2) + ':' + ('0' + m).slice(-2) + ':' + ('0' + s).slice(-2); //adds beginning 0 if under 10
+      time2.innerHTML = ('0' + h).slice(-2) + ':' + ('0' + m).slice(-2) + ':' + ('0' + s).slice(-2); //adds beginning 0 if under 10
     })
   }
 
@@ -113,7 +113,7 @@ function createEDT() {
       const hr = currentClock.querySelector('.hr');
       const mn = currentClock.querySelector('.mn');
       const sc = currentClock.querySelector('.sc');
-      var time = document.querySelector('.time');
+      var time3 = document.querySelector('.mdttime');
     
      //document.querySelector('h1').innerHTML = currentClock.dataset.title;
     
@@ -136,7 +136,7 @@ function createEDT() {
         mn.style.transform = `rotateZ(${(mm)+(mss/60)}deg)`;
         sc.style.transform = `rotateZ(${mss}deg)`;
     
-        time.innerHTML = ('0' + h).slice(-2) + ':' + ('0' + m).slice(-2) + ':' + ('0' + s).slice(-2); //adds beginning 0 if under 10
+        time3.innerHTML = ('0' + h).slice(-2) + ':' + ('0' + m).slice(-2) + ':' + ('0' + s).slice(-2); //adds beginning 0 if under 10
       })
     }
 
@@ -150,7 +150,7 @@ function createEDT() {
         const hr = currentClock.querySelector('.hr');
         const mn = currentClock.querySelector('.mn');
         const sc = currentClock.querySelector('.sc');
-        var time = document.querySelector('.time');
+        var time4 = document.querySelector('.pdttime');
       
        //document.querySelector('h1').innerHTML = currentClock.dataset.title;
       
@@ -173,7 +173,7 @@ function createEDT() {
           mn.style.transform = `rotateZ(${(mm)+(mss/60)}deg)`;
           sc.style.transform = `rotateZ(${mss}deg)`;
       
-          time.innerHTML = ('0' + h).slice(-2) + ':' + ('0' + m).slice(-2) + ':' + ('0' + s).slice(-2); //adds beginning 0 if under 10
+          time4.innerHTML = ('0' + h).slice(-2) + ':' + ('0' + m).slice(-2) + ':' + ('0' + s).slice(-2); //adds beginning 0 if under 10
         })
       }
   
@@ -187,7 +187,7 @@ function createEDT() {
       const hr = currentClock.querySelector('.hr');
       const mn = currentClock.querySelector('.mn');
       const sc = currentClock.querySelector('.sc');
-      var time = document.querySelector('.time');
+      var time5 = document.querySelector('.jsttime');
     
      //document.querySelector('h1').innerHTML = currentClock.dataset.title;
     
@@ -210,7 +210,7 @@ function createEDT() {
         mn.style.transform = `rotateZ(${(mm)+(mss/60)}deg)`;
         sc.style.transform = `rotateZ(${mss}deg)`;
     
-        time.innerHTML = ('0' + h).slice(-2) + ':' + ('0' + m).slice(-2) + ':' + ('0' + s).slice(-2); //adds beginning 0 if under 10
+        time5.innerHTML = ('0' + h).slice(-2) + ':' + ('0' + m).slice(-2) + ':' + ('0' + s).slice(-2); //adds beginning 0 if under 10
       })
     }
 
@@ -224,7 +224,7 @@ function createEDT() {
         const hr = currentClock.querySelector('.hr');
         const mn = currentClock.querySelector('.mn');
         const sc = currentClock.querySelector('.sc');
-        var time = document.querySelector('.time');
+        var time6 = document.querySelector('.bsttime');
       
        //document.querySelector('h1').innerHTML = currentClock.dataset.title;
       
@@ -247,7 +247,7 @@ function createEDT() {
           mn.style.transform = `rotateZ(${(mm)+(mss/60)}deg)`;
           sc.style.transform = `rotateZ(${mss}deg)`;
       
-          time.innerHTML = ('0' + h).slice(-2) + ':' + ('0' + m).slice(-2) + ':' + ('0' + s).slice(-2); //adds beginning 0 if under 10
+          time6.innerHTML = ('0' + h).slice(-2) + ':' + ('0' + m).slice(-2) + ':' + ('0' + s).slice(-2); //adds beginning 0 if under 10
         })
       }
 
