@@ -56,21 +56,21 @@ for (var i=0; i<clocks.length; i++) {
     let mm = m * 6; //60min * 6 = 360 (degree around circle)
 
     if (i == 0) {
-      let h = +day.getUTCHours() + +gmtOffset;
+      var h = +day.getUTCHours() + +gmtOffset;
     } else if (i == 1) {
-      let h = +day.getUTCHours + +gmtOffset;
-      let rh = h - 4;
+      var h = +day.getUTCHours + +gmtOffset - 4;
+    
     } else if (i == 2) {
-      let h = +day.getUTCHours() + +gmtOffset;
+      var h = +day.getUTCHours() + +gmtOffset;
       h -= 6;
     } else if (i == 3) {
-      let h = +day.getUTCHours() + +gmtOffset;
+      var h = +day.getUTCHours() + +gmtOffset;
       h -= 7;
     } else if (i == 4) {
-      let h = +day.getUTCHours() + +gmtOffset;
+      var h = +day.getUTCHours() + +gmtOffset;
       h -= 9;
     } else if (i == 5) {
-      let h = +day.getUTCHours() + +gmtOffset;
+      var h = +day.getUTCHours() + +gmtOffset;
       h += 1;
     }
      //prepended w/ "+" to parse into number
