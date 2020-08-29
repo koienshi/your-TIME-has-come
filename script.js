@@ -31,17 +31,15 @@ function showSlides(n) {
 // CLOCK ARMS
 const clocks = document.querySelectorAll('.clock');
 console.log(clocks);
-// get rid of for loop and make it a function 
+
+//GMT clock
 function createGMT() {
-// for (var i=0; i<clocks.length; i++) {
   var currentClock = clocks[0];
   var gmtOffset = currentClock.dataset.timezone;
   const hr = currentClock.querySelector('.hr');
   const mn = currentClock.querySelector('.mn');
   const sc = currentClock.querySelector('.sc');
   var time1 = document.querySelector('.gmttime');
-
- //document.querySelector('h1').innerHTML = currentClock.dataset.title;
 
   setInterval(() => {
     let day = new Date();
@@ -68,8 +66,8 @@ function createGMT() {
 
 createGMT();
 
+//EDT clock
 function createEDT() {
-  // for (var i=0; i<clocks.length; i++) {
     var currentClock = clocks[1];
     var gmtOffset = currentClock.dataset.timezone;
     console.log(gmtOffset);
@@ -77,8 +75,6 @@ function createEDT() {
     const mn = currentClock.querySelector('.mn');
     const sc = currentClock.querySelector('.sc');
     var time2 = document.querySelector('.edttime');
-  
-   //document.querySelector('h1').innerHTML = currentClock.dataset.title;
   
     setInterval(() => {
       let day = new Date();
@@ -105,8 +101,8 @@ function createEDT() {
 
   createEDT();
 
+  //MDT clock
   function createMDT() {
-    // for (var i=0; i<clocks.length; i++) {
       var currentClock = clocks[2];
       var gmtOffset = currentClock.dataset.timezone;
       console.log(gmtOffset);
@@ -114,8 +110,6 @@ function createEDT() {
       const mn = currentClock.querySelector('.mn');
       const sc = currentClock.querySelector('.sc');
       var time3 = document.querySelector('.mdttime');
-    
-     //document.querySelector('h1').innerHTML = currentClock.dataset.title;
     
       setInterval(() => {
         let day = new Date();
@@ -142,8 +136,8 @@ function createEDT() {
 
     createMDT();
 
+    //PST clock
     function createPST() {
-      // for (var i=0; i<clocks.length; i++) {
         var currentClock = clocks[3];
         var gmtOffset = currentClock.dataset.timezone;
         console.log(gmtOffset);
@@ -151,8 +145,6 @@ function createEDT() {
         const mn = currentClock.querySelector('.mn');
         const sc = currentClock.querySelector('.sc');
         var time4 = document.querySelector('.pdttime');
-      
-       //document.querySelector('h1').innerHTML = currentClock.dataset.title;
       
         setInterval(() => {
           let day = new Date();
@@ -179,8 +171,8 @@ function createEDT() {
   
   createPST();
 
+  //JST clock
   function createJST() {
-    // for (var i=0; i<clocks.length; i++) {
       var currentClock = clocks[4];
       var gmtOffset = currentClock.dataset.timezone;
       console.log(gmtOffset);
@@ -188,8 +180,6 @@ function createEDT() {
       const mn = currentClock.querySelector('.mn');
       const sc = currentClock.querySelector('.sc');
       var time5 = document.querySelector('.jsttime');
-    
-     //document.querySelector('h1').innerHTML = currentClock.dataset.title;
     
       setInterval(() => {
         let day = new Date();
@@ -216,8 +206,8 @@ function createEDT() {
 
     createJST();
 
+    //BST clock
     function createBST() {
-      // for (var i=0; i<clocks.length; i++) {
         var currentClock = clocks[5];
         var gmtOffset = currentClock.dataset.timezone;
         console.log(gmtOffset);
@@ -225,8 +215,6 @@ function createEDT() {
         const mn = currentClock.querySelector('.mn');
         const sc = currentClock.querySelector('.sc');
         var time6 = document.querySelector('.bsttime');
-      
-       //document.querySelector('h1').innerHTML = currentClock.dataset.title;
       
         setInterval(() => {
           let day = new Date();
