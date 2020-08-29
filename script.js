@@ -34,6 +34,16 @@ const clocks = document.querySelectorAll('.clock');
 // get rid of for loop and make it a function 
 
 for (var i=0; i<clocks.length; i++) {
+  // var currentClock = clocks[i];
+  // var gmtOffset = currentClock.dataset.timezone;
+  // console.log(gmtOffset);
+  // const hr = currentClock.querySelector('.hr');
+  // const mn = currentClock.querySelector('.mn');
+  // const sc = currentClock.querySelector('.sc');
+  // var time = document.querySelector('.time');
+
+ //document.querySelector('h1').innerHTML = currentClock.dataset.title;
+ if(i == 0) {
   var currentClock = clocks[i];
   var gmtOffset = currentClock.dataset.timezone;
   console.log(gmtOffset);
@@ -42,8 +52,6 @@ for (var i=0; i<clocks.length; i++) {
   const sc = currentClock.querySelector('.sc');
   var time = document.querySelector('.time');
 
- //document.querySelector('h1').innerHTML = currentClock.dataset.title;
-  
   setInterval(() => {
     let day = new Date();
 
@@ -55,24 +63,9 @@ for (var i=0; i<clocks.length; i++) {
     let m = day.getUTCMinutes();
     let mm = m * 6; //60min * 6 = 360 (degree around circle)
 
-    if (i == 0) {
-      var h = +day.getUTCHours() + +gmtOffset;
-    } else if (i == 1) {
-      var h = +day.getUTCHours + +gmtOffset - 4;
     
-    } else if (i == 2) {
-      var h = +day.getUTCHours() + +gmtOffset;
-      h -= 6;
-    } else if (i == 3) {
-      var h = +day.getUTCHours() + +gmtOffset;
-      h -= 7;
-    } else if (i == 4) {
-      var h = +day.getUTCHours() + +gmtOffset;
-      h -= 9;
-    } else if (i == 5) {
-      var h = +day.getUTCHours() + +gmtOffset;
-      h += 1;
-    }
+    let h = +day.getUTCHours() + +gmtOffset;
+  
      //prepended w/ "+" to parse into number
     if (h < 0) h = 24 + +h;
     let hh = h * 30; //hours hand loops around twice (720) (AM + PM)
@@ -83,6 +76,42 @@ for (var i=0; i<clocks.length; i++) {
 
     time.innerHTML = ('0' + h).slice(-2) + ':' + ('0' + m).slice(-2) + ':' + ('0' + s).slice(-2); //adds beginning 0 if under 10
   })
+}
+
+if(i == 1) {
+  var currentClock = clocks[i];
+  var gmtOffset = currentClock.dataset.timezone;
+  console.log(gmtOffset);
+  const hr = currentClock.querySelector('.hr');
+  const mn = currentClock.querySelector('.mn');
+  const sc = currentClock.querySelector('.sc');
+  var time = document.querySelector('.time');
+
+  setInterval(() => {
+    let day = new Date();
+
+    let s = day.getUTCSeconds();
+    let ss = s * 6;
+    let ms = day.getUTCMilliseconds();
+    let mss = (ms * 0.006) + +ss;
+    
+    let m = day.getUTCMinutes();
+    let mm = m * 6; //60min * 6 = 360 (degree around circle)
+
+    
+    let h = +day.getUTCHours() + +gmtOffset;
+    h -= 4;
+     //prepended w/ "+" to parse into number
+    if (h < 0) h = 24 + +h;
+    let hh = h * 30; //hours hand loops around twice (720) (AM + PM)
+    
+    hr.style.transform = `rotateZ(${(hh)+(mm/12)+(mss/3600)}deg)`;
+    mn.style.transform = `rotateZ(${(mm)+(mss/60)}deg)`;
+    sc.style.transform = `rotateZ(${mss}deg)`;
+
+    time.innerHTML = ('0' + h).slice(-2) + ':' + ('0' + m).slice(-2) + ':' + ('0' + s).slice(-2); //adds beginning 0 if under 10
+  })
+}
 }
 
 // GMT TIME HTTP REQUEST
